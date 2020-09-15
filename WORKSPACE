@@ -91,7 +91,7 @@ cc_library(
 cc_binary(
     name = "Monitor",
     srcs = ["Monitor.cpp"],
-    deps = [":Monitor],
+    deps = [":Monitor"],
   ) 
 
 cc_library(
