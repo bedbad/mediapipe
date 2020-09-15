@@ -1,12 +1,17 @@
 workspace(name = "CameraMouseSuite")
 
-load("@bazel_tools//tools/build_defs/repo:http.bzl")
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "new_git_repository")
+
+new_git_repository(
+    name = "CameraMouseSuite",
+    path = "https://github.com/bedbad/CMS-CP.git",
+    build_file = "CameraMouseSuite.BUILD",
+)
 
 cc_binary(
     name = "CameraMouseSuite",
     srcs = ["main.cpp"],
-    compiler_flags = ["-threaded"],
-    )
+)
 
 cc_library(
     name = "CameraMouseController",
