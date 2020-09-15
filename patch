@@ -1,0 +1,15 @@
+index eb3efd2..f093926 100644
+--- a/WORKSPACE
++++ b/WORKSPACE
+@@ -238,15 +238,6 @@ http_archive(
+     url = "https://github.com/opencv/opencv/releases/download/3.2.0/opencv-3.2.0-ios-framework.zip",
+ )
+-# You may run setup_android.sh to install Android SDK and NDK.
+-android_ndk_repository(
+-    name = "androidndk",
+-)
+-
+-android_sdk_repository(
+-    name = "androidsdk",
+-)
+

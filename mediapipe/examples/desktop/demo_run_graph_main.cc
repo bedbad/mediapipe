@@ -25,6 +25,7 @@
 #include "mediapipe/framework/port/opencv_video_inc.h"
 #include "mediapipe/framework/port/parse_text_proto.h"
 #include "mediapipe/framework/port/status.h"
+//#include "qapplication.h"
 
 constexpr char kInputStream[] = "input_video";
 constexpr char kOutputStream[] = "output_video";
@@ -139,7 +140,7 @@ DEFINE_string(output_video_path, "",
 }
 
 int main(int argc, char** argv) {
-  google::InitGoogleLogging(argv[0]);
+// google::InitGoogleLogging(argv[0]);
   gflags::ParseCommandLineFlags(&argc, &argv, true);
   ::mediapipe::Status run_status = RunMPPGraph();
   if (!run_status.ok()) {

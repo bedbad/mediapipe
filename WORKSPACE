@@ -2,6 +2,14 @@ workspace(name = "mediapipe")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
+
+new_local_repository(
+    name = "all_qt",
+    path = "C:/Qt/5.12.7/msvc2017_64",
+    build_file = "BUILD.all_qt",
+)
+
+
 skylib_version = "0.9.0"
 http_archive(
     name = "bazel_skylib",
@@ -142,41 +150,9 @@ http_archive(
 )
 
 new_local_repository(
-    name = "linux_opencv",
-    build_file = "@//third_party:opencv_linux.BUILD",
-    path = "/usr",
-)
-
-new_local_repository(
-    name = "linux_ffmpeg",
-    build_file = "@//third_party:ffmpeg_linux.BUILD",
-    path = "/usr"
-)
-
-new_local_repository(
-    name = "macos_opencv",
-    build_file = "@//third_party:opencv_macos.BUILD",
-    path = "/usr",
-)
-
-new_local_repository(
-    name = "macos_ffmpeg",
-    build_file = "@//third_party:ffmpeg_macos.BUILD",
-    path = "/usr",
-)
-
-new_local_repository(
     name = "windows_opencv",
     build_file = "@//third_party:opencv_windows.BUILD",
-    path = "C:\\opencv-build\\",
-)
-
-http_archive(
-    name = "android_opencv",
-    build_file = "@//third_party:opencv_android.BUILD",
-    strip_prefix = "OpenCV-android-sdk",
-    type = "zip",
-    url = "https://github.com/opencv/opencv/releases/download/3.4.3/opencv-3.4.3-android-sdk.zip",
+    path = "C:\\Users\\Ilya\\Downloads\\opencv\\build",
 )
 
 # After OpenCV 3.2.0, the pre-compiled opencv2.framework has google protobuf symbols, which will
@@ -191,14 +167,6 @@ http_archive(
     url = "https://github.com/opencv/opencv/releases/download/3.2.0/opencv-3.2.0-ios-framework.zip",
 )
 
-# You may run setup_android.sh to install Android SDK and NDK.
-android_ndk_repository(
-    name = "androidndk",
-)
-
-android_sdk_repository(
-    name = "androidsdk",
-)
 
 # iOS basic build deps.
 
