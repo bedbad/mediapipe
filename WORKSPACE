@@ -105,6 +105,94 @@ cc_library(
     srcs = ["Mouse.cpp"],
     deps = [":Mouse"],
   ) 
-                     
-            
-            
+                    
+ cc_library(
+    name = "MouseControlModule",
+    srcs = ["MouseControlModule.cpp"],
+    hdrs = ["MouseControlModule.h"],
+  ) 
+
+  cc_binary(
+    name = "MouseControlModule",
+    srcs = ["MouseControlModule.cpp"],
+    deps = [":MouseControlModule"],
+  ) 
+
+ cc_library(
+    name = "Point",
+    srcs = ["Point.cpp"],
+    hdrs = ["Point.h"],
+  )     
+  
+ cc_binary(
+    name = "Point",
+    srcs = ["Point.cpp"],
+    deps = [":Point"],
+  )     
+  
+cc_library(
+    name = "Settings",
+    srcs = ["Settings.cpp"],
+    hdrs = ["Settings.h"],
+  )    
+
+cc_binary(
+    name = "Settings",
+    srcs = ["Settings.cpp"],
+    deps = [":Settings"],
+  )  
+
+cc_library(
+    name = "StandardTrackingModule",
+    srcs = ["StandardTrackingModule.cpp"],
+    hdrs = ["StandardTrackingModule.h"],
+  )    
+
+cc_binary(
+    name = "StandardTrackingModule",
+    srcs = ["StandardTrackingModule.cpp"],
+    deps = [":StandardTrackingModule"],
+  ) 
+
+cc_library(
+    name = "TemplateTrackingModule",
+    srcs = ["TemplateTrackingModule.cpp"],
+    hdrs = ["TemplateTrackingModule.h"],
+  )    
+
+cc_binary(
+    name = "TemplateTrackingModule",
+    srcs = ["TemplateTrackingModule.cpp"],
+    deps = [":TemplateTrackingModule"],
+  )  
+
+ cc_library(
+    name = "TrackingModule",
+    srcs = ["TrackingModule.cpp"],
+    hdrs = ["TrackingModule.h"],
+  )    
+
+ cc_binary(
+    name = "TrackingModule",
+    srcs = ["TrackingModule.cpp"],
+    deps = [":TrackingModule"],
+  )    
+
+ cc_library(
+    name = "VideoManagerSurface",
+    srcs = ["VideoManagerSurface.cpp"],
+    hdrs = ["VideoManagerSurface.h"],
+  )    
+    
+  cc_binary(
+    name = "VideoManagerSurface",
+    srcs = ["VideoManagerSurface.cpp"],
+    deps = [":VideoManagerSurface"],
+  )      
+
+ cc_library(
+    name = "asmOpenCV",
+    hdrs = ["asmOpenCV.h"],
+  )    
+    
+  
