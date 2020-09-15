@@ -6,19 +6,42 @@ cc_binary(
     name = "CameraMouseSuite",
     srcs = ["main.cpp"],
     compiler_flags = ["-threaded"],
-    deps = [":base", "//lib:"],
-)
+    )
 
 cc_library(
-    name = "hello-greet",
-    srcs = ["hello-greet.cc"],
-    hdrs = ["hello-greet.h"],
+    name = "CameraMouseController",
+    srcs = ["CameraMouseController.cpp"],
+    hdrs = ["CameraMouseController.h"],
+    ) 
 
 cc_binary(
-    name = "crc_test",
-    srcs = ["crc_test.cpp"],
-    deps = [
-        "@com_github_boost_crc//:crc",
-    ]
-)
+    name = "CameraMouseController",
+    srcs = ["CameraMouseController.cpp"],
+    deps = [":CameraMouseController"],
+  )
+
+cc_library(
+    name = "ClickableLabel",
+    srcs = ["ClickableLabel.cpp"],
+    hdrs = ["ClickableLabel.h"],
+  ) 
+
+cc_binary(
+    name = "ClickableLabel",
+    srcs = ["ClickableLabel.cpp"],
+    deps = [":ClickableLabel"],
+  )
+ 
+ cc_library(
+    name = "FeatureInitializationModule",
+    srcs = ["FeatureInitializationModule.cpp"],
+    hdrs = ["FeatureInitializationModule.h"],
+  ) 
+
+cc_binary(
+    name = "FeatureInitializationModule",
+    srcs = ["FeatureInitializationModule.cpp"],
+    deps = [":FeatureInitializationModule"],
+  )
+
 
