@@ -31,13 +31,14 @@ cc_binary(
     srcs = ["ClickableLabel.cpp"],
     deps = [":ClickableLabel"],
   )
- 
- cc_library(
+
+cc_library(
     name = "FeatureInitializationModule",
     srcs = ["FeatureInitializationModule.cpp"],
     hdrs = ["FeatureInitializationModule.h"],
-  ) 
+  )
 
+ 
 cc_binary(
     name = "FeatureInitializationModule",
     srcs = ["FeatureInitializationModule.cpp"],
@@ -45,3 +46,65 @@ cc_binary(
   )
 
 
+ cc_library(
+    name = "ImageProcessing",
+    srcs = ["ImageProcessing.cpp"],
+    hdrs = ["ImageProcessing.h"],
+  ) 
+
+ cc_binary(
+    name = "ImageProcessing",
+    srcs = ["ImageProcessing.cpp"],
+    deps = [":ImageProcessing"],
+  )
+
+ cc_library(
+    name = "Keyboard",
+    srcs = ["Keyboard.cpp"],
+    hdrs = ["Keyboard.h"],
+  ) 
+ 
+cc_binary(
+    name = "Keyboard",
+    srcs = ["Keyboard.cpp"],
+    deps = [":Keyboard"],
+  ) 
+
+cc_library(
+    name = "MainWindow",
+    srcs = ["MainWindow.cpp"],
+    hdrs = ["MainWindow.h"],
+  ) 
+
+cc_binary(
+    name = "MainWindow",
+    srcs = ["MainWindow.cpp"],
+    deps = [":MainWindow"],
+  ) 
+
+cc_library(
+    name = "Monitor",
+    srcs = ["Monitor.cpp"],
+    hdrs = ["Monitor.h"],
+  ) 
+
+cc_binary(
+    name = "Monitor",
+    srcs = ["Monitor.cpp"],
+    deps = [":Monitor],
+  ) 
+
+cc_library(
+    name = "Mouse",
+    srcs = ["Mouse.cpp"],
+    hdrs = ["Mouse.h"],
+  ) 
+            
+ cc_binary(
+    name = "Mouse",
+    srcs = ["Mouse.cpp"],
+    deps = [":Mouse"],
+  ) 
+                     
+            
+            
